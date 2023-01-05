@@ -4,16 +4,19 @@ import { Theme } from '../global/types';
 export const darkTheme: Theme = {
   bg: '#15202B',
   text: '#ffffff',
+  bgHover: '#25303B',
 };
 
 export const darkerTheme: Theme = {
   bg: '#000000',
   text: '#ffffff',
+  bgHover: '#101010',
 };
 
 export const lightTheme: Theme = {
   bg: '#ffffff',
   text: '#000000',
+  bgHover: '#efefef',
 };
 
 const GlobalStyle = createGlobalStyle`
