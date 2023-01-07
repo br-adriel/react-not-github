@@ -12,6 +12,8 @@ export const darkTheme: Theme = {
   accentHover: 'rgba(29, 155, 240, 0.2)',
   likeHover: 'rgba(249, 24, 128, 0.2)',
   retweetHover: 'rgba(0, 186, 124, 0.2)',
+  bg2: '#1E2732',
+  bg2Hover: '#252E38',
 };
 
 export const darkerTheme: Theme = {
@@ -25,9 +27,12 @@ export const darkerTheme: Theme = {
   accent: '#1D9BF0',
   retweet: '#00BA7C',
   like: '#F91880',
+  bg2: '#16181C',
+  bg2Hover: '#1D1F23',
 };
 
 export const lightTheme: Theme = {
+  bg2Hover: '#EFF1F1',
   accentHover: 'rgba(29, 155, 240, 0.2)',
   likeHover: 'rgba(249, 24, 128, 0.2)',
   retweetHover: 'rgba(0, 186, 124, 0.2)',
@@ -37,6 +42,7 @@ export const lightTheme: Theme = {
   bgHover: '#efefef',
   accent: '#1D9BF0',
   retweet: '#00BA7C',
+  bg2: '#F7F9F9',
   like: '#F91880',
 };
 
