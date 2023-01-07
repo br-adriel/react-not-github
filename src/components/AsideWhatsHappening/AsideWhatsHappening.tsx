@@ -1,9 +1,9 @@
+import AsideWrapper from '../AsideWrapper';
 import TrendingTopic from '../TrendingTopic/TrendingTopic';
-import * as S from './style';
 
 const AsideWhatsHappening = () => {
   return (
-    <S.Wrapper>
+    <AsideWrapper>
       <h3>O que está acontecendo</h3>
       <TrendingTopic />
       <TrendingTopic />
@@ -11,7 +11,7 @@ const AsideWhatsHappening = () => {
       <TrendingTopic />
       <TrendingTopic />
       <a href=''>Mostrar mais</a>
-    </S.Wrapper>
+    </AsideWrapper>
   );
 };
 

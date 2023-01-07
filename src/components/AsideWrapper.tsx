@@ -1,13 +1,12 @@
 import styled from 'styled-components';
-import { Theme } from '../../global/types';
+import { Theme } from '../global/types';
 
-export const Wrapper = styled.div`
+const AsideWrapper = styled.div`
   display: flex;
   flex-direction: column;
   background: ${({ theme }: { theme: Theme }) => theme.bg2};
-  flex-grow: 1;
   border-radius: 16px;
-  max-width: 350px;
+  width: 100%;
 
   h3 {
     padding: 16px;
@@ -27,3 +26,5 @@ export const Wrapper = styled.div`
     }
   }
 `;
+
+export default AsideWrapper;
