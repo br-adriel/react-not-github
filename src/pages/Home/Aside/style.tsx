@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.section`
   flex-direction: column;
-  gap: 15px;
   flex-grow: 1;
   max-width: 350px;
   display: none;
@@ -12,9 +11,9 @@ export const Wrapper = styled.section`
   }
 `;
 
-export const Sticky = styled.div`
+export const Sticky = styled.div<{ top: string }>`
   width: 100%;
   display: flex;
   position: sticky;
-  top: 0;
+  top: ${(props) => props.top};
 `;

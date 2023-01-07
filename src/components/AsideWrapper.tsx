@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { Theme } from '../global/types';
 
 const AsideWrapper = styled.div`
+  margin-top: 16px;
   display: flex;
   flex-direction: column;
   background: ${({ theme }: { theme: Theme }) => theme.bg2};
