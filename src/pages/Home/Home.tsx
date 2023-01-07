@@ -1,4 +1,4 @@
-import AsideWhatsHappening from '../../components/AsideWhatsHappening/AsideWhatsHappening';
+import Aside from './Aside';
 import Feed from './Feed';
 import * as S from './style';
 
@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <S.Wrapper>
       <Feed />
-      <AsideWhatsHappening />
+      <Aside />
     </S.Wrapper>
   );
 };
