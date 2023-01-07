@@ -7,12 +7,18 @@ export const Wrapper = styled.div`
   flex-direction: column;
   background: ${({ theme }: { theme: Theme }) => theme.bg2};
   padding: 4px 16px;
+  padding-bottom: 12px;
+  cursor: pointer;
 
   h4 {
     font-size: 1rem;
     font-weight: 700;
     margin-top: -5px;
     margin-bottom: 3px;
+  }
+
+  :hover {
+    background: ${({ theme }: { theme: Theme }) => theme.bg2Hover};
   }
 `;
 
