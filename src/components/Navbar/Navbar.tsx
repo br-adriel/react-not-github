@@ -1,5 +1,5 @@
 import { AiFillBell, AiOutlineBell } from 'react-icons/ai';
-import { BiHash } from 'react-icons/bi';
+import { BiHash, BiSearch } from 'react-icons/bi';
 import { BsPerson, BsPersonFill } from 'react-icons/bs';
 import { HiMail, HiOutlineMail } from 'react-icons/hi';
 import { RiHome7Fill, RiHome7Line } from 'react-icons/ri';
@@ -14,6 +14,13 @@ const Navbar = () => {
         icon={<BiHash />}
         iconActive={<BiHash style={{ strokeWidth: '1px' }} />}
         link=''
+        hideSmall={true}
+      />
+      <NavItem
+        icon={<BiSearch />}
+        iconActive={<BiSearch style={{ strokeWidth: '1px' }} />}
+        link=''
+        hideLarge={true}
       />
       <NavItem icon={<AiOutlineBell />} iconActive={<AiFillBell />} link='' />
       <NavItem icon={<HiOutlineMail />} iconActive={<HiMail />} link='' />
