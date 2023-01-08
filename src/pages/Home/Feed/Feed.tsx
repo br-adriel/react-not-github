@@ -8,9 +8,11 @@ const Feed = () => {
     <S.Feed>
       <S.Title>
         <h2>Página inicial</h2>
-        <a href=''>
-          <BsStars />
-        </a>
+        <div>
+          <a href=''>
+            <BsStars />
+          </a>
+        </div>
       </S.Title>
       <CriarTweet />
       <Tweet />
