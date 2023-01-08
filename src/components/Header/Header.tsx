@@ -1,4 +1,5 @@
 import { BsTwitter } from 'react-icons/bs';
+import Navbar from '../Navbar';
 import * as S from './style';
 
 const Header = () => {
@@ -10,6 +11,7 @@ const Header = () => {
             <BsTwitter />
           </a>
         </S.Brand>
+        <Navbar />
       </div>
       <S.ImageWrapper>
         <img
