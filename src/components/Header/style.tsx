@@ -16,6 +16,45 @@ export const HeaderTag = styled.header`
     justify-content: flex-start;
     align-items: center;
   }
+
+  button {
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+
+    :hover {
+      background: ${({ theme }: { theme: Theme }) => `${theme.text}11`};
+    }
+
+    svg {
+      box-sizing: content-box;
+      width: 24px;
+      height: 24px;
+      padding: 2px;
+    }
+
+    :first-of-type svg {
+      border-radius: 50%;
+      padding: 0;
+      border: 2px solid ${({ theme }: { theme: Theme }) => theme.text};
+    }
+
+    :last-of-type {
+      background: ${({ theme }: { theme: Theme }) => theme.accent};
+      color: #fff;
+      margin-top: 10px;
+
+      :hover {
+        opacity: 0.8;
+      }
+    }
+  }
 `;
 
 export const ImageWrapper = styled.div`

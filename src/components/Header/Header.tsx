@@ -1,4 +1,6 @@
+import { BiDotsHorizontalRounded } from 'react-icons/bi';
 import { BsTwitter } from 'react-icons/bs';
+import { FiFeather } from 'react-icons/fi';
 import Navbar from '../Navbar';
 import * as S from './style';
 
@@ -12,6 +14,12 @@ const Header = () => {
           </a>
         </S.Brand>
         <Navbar />
+        <button>
+          <BiDotsHorizontalRounded />
+        </button>
+        <button>
+          <FiFeather />
+        </button>
       </div>
       <S.ImageWrapper>
         <img
