@@ -11,4 +11,5 @@ export type Theme = {
   accentHover: string;
   likeHover: string;
   retweetHover: string;
+  brandColor: string;
 };

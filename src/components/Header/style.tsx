@@ -77,7 +77,7 @@ export const ImageWrapper = styled.div`
 
 export const Brand = styled.div`
   padding: 12px;
-  color: ${({ theme }: { theme: Theme }) => theme.accent};
+  color: ${({ theme }: { theme: Theme }) => theme.brandColor};
   border-radius: 50%;
   display: flex;
   justify-content: center;

@@ -14,6 +14,7 @@ export const darkTheme: Theme = {
   retweetHover: 'rgba(0, 186, 124, 0.2)',
   bg2: '#1E2732',
   bg2Hover: '#252E38',
+  brandColor: '#ffffff',
 };
 
 export const darkerTheme: Theme = {
@@ -29,6 +30,7 @@ export const darkerTheme: Theme = {
   like: '#F91880',
   bg2: '#16181C',
   bg2Hover: '#1D1F23',
+  brandColor: '#ffffff',
 };
 
 export const lightTheme: Theme = {
@@ -41,6 +43,7 @@ export const lightTheme: Theme = {
   text: '#000000',
   bgHover: '#efefef',
   accent: '#1D9BF0',
+  brandColor: '#1D9BF0',
   retweet: '#00BA7C',
   bg2: '#F7F9F9',
   like: '#F91880',
