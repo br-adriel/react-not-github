@@ -5,6 +5,7 @@ export const Wrapper = styled.section`
   flex-grow: 1;
   max-width: 350px;
   display: none;
+  margin-left: 30px;
 
   @media screen and (min-width: 1021px) {
     display: flex;
