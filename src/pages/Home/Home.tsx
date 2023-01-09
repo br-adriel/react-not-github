@@ -1,5 +1,5 @@
 import Header from '../../components/Header';
-import Aside from './Aside';
+import Aside from '../../components/Aside';
 import Feed from './Feed';
 import * as S from './style';
 
