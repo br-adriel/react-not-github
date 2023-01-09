@@ -1,11 +1,12 @@
 import { BsStars } from 'react-icons/bs';
+import { Container600px } from '../../../components/Container';
 import CriarTweet from '../../../components/CreateTweet';
 import Tweet from '../../../components/Tweet';
 import * as S from './style';
 
 const Feed = () => {
   return (
-    <S.Feed>
+    <Container600px>
       <S.Title>
         <h2>Página inicial</h2>
         <div>
@@ -23,7 +24,7 @@ const Feed = () => {
       <Tweet />
       <Tweet />
       <Tweet />
-    </S.Feed>
+    </Container600px>
   );
 };
 
