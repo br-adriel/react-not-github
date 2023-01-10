@@ -1,7 +1,6 @@
-import { AiOutlineRetweet } from 'react-icons/ai';
-import { BiBarChart, BiComment } from 'react-icons/bi';
-import { BsDot, BsHeart, BsHeartFill, BsThreeDots } from 'react-icons/bs';
-import { FiShare } from 'react-icons/fi';
+import { BsHeartFill } from 'react-icons/bs';
+import TweetAuthor from './TweetAuthor';
+import TweetActions from './TweetActions';
 import * as S from './style';
 
 const Tweet = () => {
@@ -19,50 +18,13 @@ const Tweet = () => {
           height='48px'
         />
         <div>
-          <S.Author>
-            <p>
-              <a>Fulano</a>
-              <span>
-                @fulano <BsDot /> 6h
-              </span>
-            </p>
-            <a href=''>
-              <BsThreeDots />
-            </a>
-          </S.Author>
+          <TweetAuthor />
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae ut
             unde rerum recusandae veritatis consequatur officia fugiat cum
             libero! Enim.
           </p>
-          <S.Action>
-            <div>
-              <div>
-                <BiBarChart />
-              </div>
-            </div>
-            <div>
-              <div>
-                <BiComment />
-              </div>
-            </div>
-            <div>
-              <div>
-                <AiOutlineRetweet />
-              </div>
-            </div>
-            <div>
-              <div>
-                <BsHeart />
-              </div>
-              <p>1234</p>
-            </div>
-            <div>
-              <div>
-                <FiShare />
-              </div>
-            </div>
-          </S.Action>
+          <TweetActions />
         </div>
       </S.Content>
     </S.Wrapper>
