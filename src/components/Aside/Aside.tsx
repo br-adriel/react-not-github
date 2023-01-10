@@ -1,7 +1,7 @@
-import AsideWhatsHappening from '../../../components/AsideWhatsHappening';
-import AsideWhoToFollow from '../../../components/AsideWhoToFollow';
-import Footer from '../../../components/Footer';
-import SearchForm from '../../../components/SearchForm';
+import AsideWhatsHappening from '../AsideWhatsHappening';
+import AsideWhoToFollow from '../AsideWhoToFollow';
+import Footer from '../Footer';
+import SearchForm from '../SearchForm';
 import * as S from './style';
 
 const Aside = () => {

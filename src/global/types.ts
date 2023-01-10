@@ -13,3 +13,10 @@ export type Theme = {
   retweetHover: string;
   brandColor: string;
 };
+
+export type NotificationType =
+  | 'notification'
+  | 'like'
+  | 'response'
+  | 'device'
+  | 'follow';

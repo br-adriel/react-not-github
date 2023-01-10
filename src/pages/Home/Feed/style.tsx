@@ -46,8 +46,3 @@ export const Title = styled.div`
     height: 20px;
   }
 `;
-
-export const Feed = styled.div`
-  width: 100%;
-  max-width: 600px;
-`;
