@@ -1,10 +1,9 @@
-import React from 'react';
-import * as S from './style';
+import { NotificationText, ProfileImage } from '../style';
 
 const FollowNotification = () => {
   return (
     <>
-      <S.Follower>
+      <ProfileImage>
         <a href=''>
           <img
             src='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png'
@@ -13,10 +12,10 @@ const FollowNotification = () => {
             height='32px'
           />
         </a>
-      </S.Follower>
-      <S.FollowerName>
+      </ProfileImage>
+      <NotificationText>
         <a href=''>Fulaninho silva</a> seguiu você
-      </S.FollowerName>
+      </NotificationText>
     </>
   );
 };
