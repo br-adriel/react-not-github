@@ -3,15 +3,16 @@ import { BsTwitter } from 'react-icons/bs';
 import { FiFeather } from 'react-icons/fi';
 import Navbar from '../Navbar';
 import * as S from './style';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
     <S.HeaderTag>
       <div>
         <S.Brand>
-          <a href=''>
+          <Link to='/'>
             <BsTwitter />
-          </a>
+          </Link>
         </S.Brand>
         <Navbar />
         <button>

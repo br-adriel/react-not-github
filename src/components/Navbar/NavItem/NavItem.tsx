@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import * as S from './style';
 
 interface IProps {
@@ -19,7 +20,9 @@ const NavItem: React.FC<IProps> = (props) => {
   } = props;
   return (
     <S.Wrapper hideSmall={hideSmall} hideLarge={hideLarge}>
-      <a href={link}>{icon}</a>
+      <NavLink to={link}>
+        {({ isActive }) => (isActive ? iconActive : icon)}
+      </NavLink>
     </S.Wrapper>
   );
 };

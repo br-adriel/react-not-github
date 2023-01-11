@@ -9,22 +9,34 @@ import * as S from './style';
 const Navbar = () => {
   return (
     <S.NavTag>
-      <NavItem icon={<RiHome7Line />} iconActive={<RiHome7Fill />} link='' />
+      <NavItem icon={<RiHome7Line />} iconActive={<RiHome7Fill />} link='/' />
       <NavItem
         icon={<BiHash />}
         iconActive={<BiHash style={{ strokeWidth: '1px' }} />}
-        link=''
+        link='/explore'
         hideSmall={true}
       />
       <NavItem
         icon={<BiSearch />}
         iconActive={<BiSearch style={{ strokeWidth: '1px' }} />}
-        link=''
+        link='/explore'
         hideLarge={true}
       />
-      <NavItem icon={<AiOutlineBell />} iconActive={<AiFillBell />} link='' />
-      <NavItem icon={<HiOutlineMail />} iconActive={<HiMail />} link='' />
-      <NavItem icon={<BsPerson />} iconActive={<BsPersonFill />} link='' />
+      <NavItem
+        icon={<AiOutlineBell />}
+        iconActive={<AiFillBell />}
+        link='/notifications'
+      />
+      <NavItem
+        icon={<HiOutlineMail />}
+        iconActive={<HiMail />}
+        link='/messages'
+      />
+      <NavItem
+        icon={<BsPerson />}
+        iconActive={<BsPersonFill />}
+        link='/username'
+      />
     </S.NavTag>
   );
 };
