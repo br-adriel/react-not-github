@@ -72,4 +72,5 @@ export const Container = styled(Container600px)`
   flex-direction: column;
   border-right: 1px solid #ddd;
   border-left: 1px solid #ddd;
+  padding-bottom: 100px;
 `;

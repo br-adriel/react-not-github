@@ -25,7 +25,7 @@ const Explore = () => {
             </S.SettingsButtonWrapper>
           </S.SearchWrapper>
           <S.Navigation>
-            <NavLink to={'/explore'}>
+            <NavLink to={''}>
               <div>
                 <span>Assuntos do momento</span>
                 <div></div>

@@ -10,4 +10,9 @@ export const Container600px = styled.div`
   max-width: 600px;
 `;
 
+export const Container920px = styled.div`
+  width: 100%;
+  max-width: 920px;
+`;
+
 export default Container;
