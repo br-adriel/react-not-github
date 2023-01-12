@@ -1,14 +1,21 @@
 import styled from 'styled-components';
 import { Theme } from '../../global/types';
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.div<{ isOnSidebar: boolean }>`
   width: 100%;
   display: flex;
   flex-direction: column;
-  background: ${({ theme }: { theme: Theme }) => theme.bg2};
   padding: 4px 16px;
   padding-bottom: 12px;
   cursor: pointer;
+
+  background: ${({
+    isOnSidebar,
+    theme,
+  }: {
+    isOnSidebar: boolean;
+    theme: Theme;
+  }) => (isOnSidebar ? theme.bg2 : theme.bg)};
 
   h4 {
     font-size: 1rem;

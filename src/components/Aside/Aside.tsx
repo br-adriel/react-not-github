@@ -2,11 +2,12 @@ import AsideWhatsHappening from '../AsideWhatsHappening';
 import AsideWhoToFollow from '../AsideWhoToFollow';
 import Footer from '../Footer';
 import SearchForm from '../SearchForm';
+import SidebarWrapper from '../SideBarWrapper';
 import * as S from './style';
 
 const Aside = () => {
   return (
-    <S.Wrapper>
+    <SidebarWrapper>
       <S.Sticky top='0px'>
         <SearchForm />
       </S.Sticky>
@@ -15,7 +16,7 @@ const Aside = () => {
         <AsideWhoToFollow />
         <Footer />
       </S.Sticky>
-    </S.Wrapper>
+    </SidebarWrapper>
   );
 };
 
