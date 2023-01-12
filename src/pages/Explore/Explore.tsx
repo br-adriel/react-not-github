@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 import AsideWhoToFollow from '../../components/AsideWhoToFollow';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
+import NewOnTweeter from '../../components/NewOnTwitter';
 import SearchForm from '../../components/SearchForm';
 import SidebarWrapper from '../../components/SideBarWrapper';
 import AuthGoogleContext from '../../contexts/AuthGoogleContext';
@@ -40,7 +41,7 @@ const Explore = () => {
         <S.Trending sidebar={false} />
       </S.Container>
       <SidebarWrapper>
-        {user ? <AsideWhoToFollow /> : null}
+        {user ? <AsideWhoToFollow /> : <NewOnTweeter />}
         <Footer />
       </SidebarWrapper>
     </S.Wrapper>
