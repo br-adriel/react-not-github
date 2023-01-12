@@ -3,6 +3,7 @@ import { NavLink, Outlet } from 'react-router-dom';
 import Aside from '../../components/Aside';
 import { Container600px } from '../../components/Container';
 import Header from '../../components/Header';
+import HorizontalNavigation from '../../components/HorizontalNavigation';
 import * as S from './style';
 
 const Notifications = () => {
@@ -20,7 +21,7 @@ const Notifications = () => {
                 </a>
               </S.Settings>
             </S.Title>
-            <S.Nav>
+            <HorizontalNavigation>
               <NavLink to={'/notifications/'}>
                 <div>
                   <span>Tudo</span>
@@ -39,7 +40,7 @@ const Notifications = () => {
                   <div></div>
                 </div>
               </NavLink>
-            </S.Nav>
+            </HorizontalNavigation>
           </S.Heading>
           <Outlet />
         </S.Content>
