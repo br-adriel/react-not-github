@@ -1,9 +1,9 @@
 import { BsThreeDots } from 'react-icons/bs';
 import * as S from './style';
 
-const TrendingTopic = () => {
+const TrendingTopic = ({ sidebar = true }) => {
   return (
-    <S.Wrapper>
+    <S.Wrapper isOnSidebar={sidebar}>
       <S.Subject>
         <S.FadedText>Assuntos do momento</S.FadedText>
         <a href=''>
