@@ -5,12 +5,14 @@ import Notifications, {
   Mentions,
   Verified,
 } from '../pages/Notifications';
+import Explore from '../pages/Explore';
 
 const AppRouter = () => {
   return (
     <HashRouter>
       <Routes>
         <Route path='' element={<Home />} />
+        <Route path='explore' element={<Explore />} />
         <Route path='notifications' element={<Notifications />}>
           <Route path='' element={<AllNotifications />} />
           <Route path='verified' element={<Verified />} />
