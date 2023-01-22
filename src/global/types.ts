@@ -14,6 +14,16 @@ export type Theme = {
   brandColor: string;
 };
 
+export type TweetType = {
+  id: string;
+  content: string;
+  timestamp: string;
+  likes: string[];
+  retweetsCount: number;
+  isRetweet: boolean;
+  author: string;
+};
+
 export type NotificationType =
   | 'notification'
   | 'like'

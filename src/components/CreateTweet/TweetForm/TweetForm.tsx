@@ -17,13 +17,21 @@ const TweetForm = ({ ...rest }: Props) => {
   };
 
   return (
-    <S.Form onSubmit={rest.onSubmit}>
+    <S.Form
+      onSubmit={(e) => {
+        if (!invalid && !!rest.onSubmit) {
+          rest.onSubmit(e);
+        }
+        setInvalid(false);
+        setTweetContent('');
+      }}
+    >
       <S.PublicSelector>
         <p>Qualquer pessoa</p>
         <IoIosArrowDown />
       </S.PublicSelector>
       <textarea
-        name=''
+        name='tweet-content'
         id=''
         placeholder='O que está acontecendo?'
         rows={4}
