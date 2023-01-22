@@ -1,8 +1,8 @@
 import { useSelector } from 'react-redux';
 import { selectAuth } from '../../store/authSlice';
+import { LoginForm, SignUpForm } from '../AuthForm';
 import AuthModal from '../AuthModal/AuthModal';
 import { Container920px } from '../Container';
-import LoginForm from '../LoginForm';
 import * as S from './style';
 
 const LoginBanner = () => {
@@ -21,7 +21,7 @@ const LoginBanner = () => {
             <LoginForm />
           </AuthModal>
           <AuthModal triggerContent={'Inscrever-se'}>
-            <p>Rello</p>
+            <SignUpForm />
           </AuthModal>
         </S.BtnGroup>
       </Container920px>
