@@ -1,10 +1,11 @@
-import { useContext } from 'react';
-import AuthGoogleContext from '../../contexts/AuthGoogleContext';
+import { useSelector } from 'react-redux';
+import { selectAuth } from '../../store/authSlice';
+import AuthModal from '../AuthModal/AuthModal';
 import { Container920px } from '../Container';
 import * as S from './style';
 
 const LoginBanner = () => {
-  const { user } = useContext(AuthGoogleContext);
+  const { user } = useSelector(selectAuth);
 
   if (user) return null;
   return (
@@ -15,8 +16,12 @@ const LoginBanner = () => {
           <p>As pessoas que usam o Twitter são as primeiras a saber.</p>
         </S.TextContent>
         <S.BtnGroup>
-          <button type='button'>Entrar</button>
-          <button type='button'>Inscrever-se</button>
+          <AuthModal triggerContent={'Entrar'}>
+            <p>Olá</p>
+          </AuthModal>
+          <AuthModal triggerContent={'Inscrever-se'}>
+            <p>Rello</p>
+          </AuthModal>
         </S.BtnGroup>
       </Container920px>
     </S.Wrapper>

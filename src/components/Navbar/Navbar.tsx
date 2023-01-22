@@ -1,15 +1,15 @@
-import { useContext } from 'react';
 import { AiFillBell, AiOutlineBell } from 'react-icons/ai';
 import { BiHash, BiSearch } from 'react-icons/bi';
 import { BsPerson, BsPersonFill } from 'react-icons/bs';
 import { HiMail, HiOutlineMail } from 'react-icons/hi';
 import { RiHome7Fill, RiHome7Line } from 'react-icons/ri';
-import AuthGoogleContext from '../../contexts/AuthGoogleContext';
+import { useSelector } from 'react-redux';
+import { selectAuth } from '../../store/authSlice';
 import NavItem from './NavItem';
 import * as S from './style';
 
 const Navbar = () => {
-  const { user } = useContext(AuthGoogleContext);
+  const { user } = useSelector(selectAuth);
   return (
     <S.NavTag>
       {!user ? null : (

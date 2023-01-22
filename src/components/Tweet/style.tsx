@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Theme } from '../../global/types';
 
-export const Wrapper = styled.p`
+export const Wrapper = styled.div`
   display: flex;
   border: 1px solid #eee;
   width: 100%;

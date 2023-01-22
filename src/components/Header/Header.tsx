@@ -1,14 +1,14 @@
-import { useContext } from 'react';
 import { BiDotsHorizontalRounded } from 'react-icons/bi';
 import { BsTwitter } from 'react-icons/bs';
 import { FiFeather } from 'react-icons/fi';
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import AuthGoogleContext from '../../contexts/AuthGoogleContext';
+import { selectAuth } from '../../store/authSlice';
 import Navbar from '../Navbar';
 import * as S from './style';
 
 const Header = () => {
-  const { user } = useContext(AuthGoogleContext);
+  const { user } = useSelector(selectAuth);
   return (
     <S.HeaderTag>
       <div>

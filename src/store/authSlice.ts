@@ -4,21 +4,25 @@ import { RootState } from '.';
 
 type StateType = {
   user: User | null;
+  token: string | null;
 };
 
 const initialState: StateType = {
   user: null,
+  token: null,
 };
 
 const authSlice = createSlice({
   name: 'auth',
   initialState,
   reducers: {
-    login: (state, action: PayloadAction<User>) => {
-      state.user = action.payload;
+    login: (state, action: PayloadAction<StateType>) => {
+      state.user = action.payload.user;
+      state.token = action.payload.token;
     },
     logout: (state) => {
       state.user = null;
+      state.token = null;
     },
   },
 });
