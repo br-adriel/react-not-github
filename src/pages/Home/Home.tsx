@@ -1,13 +1,14 @@
-import { useContext } from 'react';
+import { useSelector } from 'react-redux';
 import Aside from '../../components/Aside';
 import Header from '../../components/Header';
-import AuthGoogleContext from '../../contexts/AuthGoogleContext';
+import { selectAuth } from '../../store/authSlice';
 import Explore from '../Explore';
 import Feed from './Feed';
 import * as S from './style';
 
 const Home = () => {
-  const { user } = useContext(AuthGoogleContext);
+  const { user } = useSelector(selectAuth);
+
   if (!user) return <Explore />;
   return (
     <S.Wrapper>

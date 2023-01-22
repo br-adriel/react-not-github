@@ -69,6 +69,10 @@ const GlobalStyle = createGlobalStyle`
     flex-direction: column;
     align-items: center;
   }
+
+  button, a {
+    cursor: pointer
+  }
 `;
 
 export default GlobalStyle;

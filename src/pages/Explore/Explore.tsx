@@ -1,5 +1,5 @@
-import { useContext } from 'react';
 import { FiSettings } from 'react-icons/fi';
+import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import AsideWhoToFollow from '../../components/AsideWhoToFollow';
 import Footer from '../../components/Footer';
@@ -7,11 +7,12 @@ import Header from '../../components/Header';
 import NewOnTweeter from '../../components/NewOnTwitter';
 import SearchForm from '../../components/SearchForm';
 import SidebarWrapper from '../../components/SideBarWrapper';
-import AuthGoogleContext from '../../contexts/AuthGoogleContext';
+import { selectAuth } from '../../store/authSlice';
 import * as S from './style';
 
 const Explore = () => {
-  const { user } = useContext(AuthGoogleContext);
+  const { user } = useSelector(selectAuth);
+
   return (
     <S.Wrapper>
       <Header />
