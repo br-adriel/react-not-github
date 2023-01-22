@@ -1,14 +1,6 @@
-import {
-  createUserWithEmailAndPassword,
-  updateProfile,
-  User,
-} from 'firebase/auth';
 import { useState } from 'react';
 import { FcGoogle } from 'react-icons/fc';
-import { useDispatch } from 'react-redux';
-import { auth } from '../../services/firebase';
-import { login } from '../../store/authSlice';
-import { signInGoogle } from '../../utils/auth';
+import { signInGoogle, SignInWithEmail } from '../../utils/auth';
 import * as S from './AuthForm.style';
 
 const SignUpForm = () => {
@@ -16,7 +8,6 @@ const SignUpForm = () => {
   const [name, setName] = useState('');
   const [password, setPassword] = useState('');
   const [password2, setPassword2] = useState('');
-  const dispatch = useDispatch();
 
   const formSubmit = async (e: any) => {
     e.preventDefault();
@@ -26,28 +17,7 @@ const SignUpForm = () => {
       return;
     }
 
-    const userEmail = email.trim();
-    const userName = name.trim();
-
-    const userCredential = await createUserWithEmailAndPassword(
-      auth,
-      userEmail,
-      password
-    );
-    await updateProfile(userCredential.user, {
-      displayName: userName,
-      photoURL: 'https://cdn-icons-png.flaticon.com/512/149/149071.png',
-    });
-
-    dispatch(
-      login({
-        user: {
-          displayName: userCredential.user.displayName,
-          photoURL: userCredential.user.photoURL,
-          uid: userCredential.user.uid,
-        } as User,
-      })
-    );
+    await SignInWithEmail(email, name, password);
   };
 
   return (
