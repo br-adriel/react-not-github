@@ -3,31 +3,29 @@ import styled from 'styled-components';
 import { Theme } from '../../global/types';
 
 export const Overlay = styled(Dialog.Overlay)`
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100vw;
   height: 100vh;
   background-color: #2225;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 `;
 
 export const Content = styled(Dialog.Content)`
   background-color: ${({ theme }: { theme: Theme }) => theme.bg};
-  padding: 5px;
   border-radius: 10px;
-  margin: 20px 0;
   display: flex;
   flex-direction: column;
-`;
-
-export const ContentWrapper = styled.div`
-  position: fixed;
+  display: relative;
   top: 0px;
   left: 0px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  padding: 10px;
+  width: min(100%, 400px);
+  margin: 16px 0;
 `;
 
 export const Header = styled.div`

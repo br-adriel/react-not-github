@@ -13,8 +13,7 @@ const AuthModal = ({ children, triggerContent }: Props) => {
     <Dialog.Root>
       <Dialog.Trigger>{triggerContent}</Dialog.Trigger>
       <Dialog.Portal>
-        <S.Overlay />
-        <S.ContentWrapper>
+        <S.Overlay>
           <S.Content>
             <S.Header>
               <Dialog.Close>
@@ -27,7 +26,7 @@ const AuthModal = ({ children, triggerContent }: Props) => {
 
             {children}
           </S.Content>
-        </S.ContentWrapper>
+        </S.Overlay>
       </Dialog.Portal>
     </Dialog.Root>
   );
