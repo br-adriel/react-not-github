@@ -13,17 +13,17 @@ const Header = () => {
     <S.HeaderTag>
       <div>
         <S.Brand>
-          <Link to='/'>
+          <Link to='/' title='Página inicial'>
             <BsTwitter />
           </Link>
         </S.Brand>
         <Navbar />
         {!user ? null : (
           <>
-            <button>
+            <button title='Menu'>
               <BiDotsHorizontalRounded />
             </button>
-            <button>
+            <button title='Novo tweet'>
               <FiFeather />
             </button>
           </>

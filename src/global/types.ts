@@ -1,3 +1,5 @@
+import { Timestamp } from 'firebase/firestore';
+
 export type Theme = {
   bg: string;
   bg2: string;
@@ -14,15 +16,33 @@ export type Theme = {
   brandColor: string;
 };
 
-export type TweetType = {
+export interface UserType {
+  uid: string;
+  displayName: string;
+  email: string;
+  photoURL: string;
+}
+
+export interface TweetType {
   id: string;
+  original?: string;
   content: string;
-  timestamp: string;
+  timestamp: Timestamp;
   likes: string[];
   retweetsCount: number;
   isRetweet: boolean;
+  retweeter?: {
+    uid: string;
+    displayName?: string;
+    email?: string;
+    photoURL?: string;
+  };
   author: string;
-};
+}
+
+export interface TweetWithAuthorType extends Omit<TweetType, 'author'> {
+  author: UserType;
+}
 
 export type NotificationType =
   | 'notification'

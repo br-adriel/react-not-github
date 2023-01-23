@@ -5,6 +5,7 @@ import LoginBanner from './components/LoginBanner';
 import { Provider } from './contexts/ThemeContext';
 import AppRouter from './routes/AppRouter';
 import { login } from './store/authSlice';
+import './lib/dayjs';
 
 function App() {
   const dispatch = useDispatch();

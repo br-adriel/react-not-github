@@ -13,19 +13,26 @@ const Navbar = () => {
   return (
     <S.NavTag>
       {!user ? null : (
-        <NavItem icon={<RiHome7Line />} iconActive={<RiHome7Fill />} link='/' />
+        <NavItem
+          icon={<RiHome7Line />}
+          iconActive={<RiHome7Fill />}
+          link='/'
+          title='Página inicial'
+        />
       )}
       <NavItem
         icon={<BiHash />}
         iconActive={<BiHash style={{ strokeWidth: '1px' }} />}
         link='/explore'
         hideSmall={true}
+        title='Explorar'
       />
       <NavItem
         icon={<BiSearch />}
         iconActive={<BiSearch style={{ strokeWidth: '1px' }} />}
         link='/explore'
         hideLarge={true}
+        title='Pesquisar'
       />
       {!user ? null : (
         <>
@@ -33,16 +40,19 @@ const Navbar = () => {
             icon={<AiOutlineBell />}
             iconActive={<AiFillBell />}
             link='/notifications'
+            title='Notificações'
           />
           <NavItem
             icon={<HiOutlineMail />}
             iconActive={<HiMail />}
             link='/messages'
+            title='Mensagens'
           />
           <NavItem
             icon={<BsPerson />}
             iconActive={<BsPersonFill />}
             link='/username'
+            title='Perfil'
           />
         </>
       )}

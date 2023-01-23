@@ -3,7 +3,7 @@ import { Theme } from '../../global/types';
 
 export const Wrapper = styled.div`
   display: flex;
-  border: 1px solid #eee;
+  border-bottom: 1px solid #eee;
   width: 100%;
   flex-direction: column;
   padding: 6px;
@@ -38,5 +38,6 @@ export const Content = styled.div`
     display: flex;
     flex-direction: column;
     gap: 4px;
+    flex-grow: 1;
   }
 `;

@@ -4,7 +4,12 @@ import { BsHeart } from 'react-icons/bs';
 import { FiShare } from 'react-icons/fi';
 import * as S from './style';
 
-const TweetActions = () => {
+interface Props {
+  likes: number;
+  retweets: number;
+}
+
+const TweetActions = ({ likes, retweets }: Props) => {
   return (
     <S.Action>
       <div>
@@ -21,12 +26,13 @@ const TweetActions = () => {
         <div>
           <AiOutlineRetweet />
         </div>
+        <p>{retweets > 0 && retweets}</p>
       </div>
       <div>
         <div>
           <BsHeart />
         </div>
-        <p>1234</p>
+        <p>{likes > 0 && likes}</p>
       </div>
       <div>
         <div>
