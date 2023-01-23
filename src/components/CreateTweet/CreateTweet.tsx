@@ -11,7 +11,7 @@ const CreateTweet = () => {
     e.preventDefault();
 
     const content: string = e.target['tweet-content'].value.trim();
-    await createTweet(content);
+    if (content.length) await createTweet(content);
   };
 
   if (!user) return null;

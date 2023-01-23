@@ -2,13 +2,18 @@ import { BsHeartFill } from 'react-icons/bs';
 import TweetAuthor from './TweetAuthor';
 import TweetActions from './TweetActions';
 import * as S from './style';
+import { TweetType } from '../../global/types';
 
-const Tweet = () => {
+const Tweet = ({ tweet }: { tweet: TweetType }) => {
   return (
     <S.Wrapper>
       <S.Interaction>
-        <BsHeartFill />
-        <p>Fulano curtiu</p>
+        {tweet.isRetweet ? (
+          <>
+            <BsHeartFill />
+            <p>Fulano deu retweet</p>
+          </>
+        ) : null}
       </S.Interaction>
       <S.Content>
         <S.ProfilePicture
@@ -19,12 +24,11 @@ const Tweet = () => {
         />
         <div>
           <TweetAuthor />
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae ut
-            unde rerum recusandae veritatis consequatur officia fugiat cum
-            libero! Enim.
-          </p>
-          <TweetActions />
+          <p>{tweet.content}</p>
+          <TweetActions
+            likes={tweet.likes.length}
+            retweets={tweet.retweetsCount}
+          />
         </div>
       </S.Content>
     </S.Wrapper>
