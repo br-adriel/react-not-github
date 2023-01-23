@@ -9,13 +9,14 @@ import { BsStars } from 'react-icons/bs';
 import { Container600px } from '../../../components/Container';
 import CriarTweet from '../../../components/CreateTweet';
 import Tweet from '../../../components/Tweet';
-import { TweetType } from '../../../global/types';
+import { TweetType, TweetWithAuthorType } from '../../../global/types';
 import { db } from '../../../services/firebase';
+import { getTweet } from '../../../utils/tweets';
 import * as S from './style';
 
 const Feed = () => {
   const [loading, setLoading] = useState(false);
-  const [tweets, setTweets] = useState<TweetType[]>([]);
+  const [tweets, setTweets] = useState<TweetWithAuthorType[]>([]);
 
   useEffect(() => {
     const loadFeed = async () => {
@@ -24,13 +25,10 @@ const Feed = () => {
         orderBy('timestamp', 'desc')
       );
 
-      onSnapshot(q, (snapshot) => {
-        const fetchedTweets: TweetType[] = snapshot.docs.map((doc) => {
-          return {
-            id: doc.id,
-            ...doc.data(),
-          } as TweetType;
-        });
+      onSnapshot(q, async (snapshot) => {
+        const fetchedTweets: TweetWithAuthorType[] = await Promise.all(
+          snapshot.docs.map(async (doc) => getTweet(doc))
+        );
         setTweets(fetchedTweets);
       });
       setLoading(false);

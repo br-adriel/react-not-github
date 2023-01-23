@@ -1,13 +1,19 @@
+import dayjs from 'dayjs';
 import { BsDot, BsThreeDots } from 'react-icons/bs';
 import * as S from './style';
 
-const TweetAuthor = () => {
+interface Props {
+  displayName: string;
+  timestamp?: Date;
+}
+
+const TweetAuthor = ({ displayName, timestamp }: Props) => {
   return (
     <S.Author>
       <p>
-        <a>Fulano</a>
+        <a>{displayName}</a>
         <span>
-          @fulano <BsDot /> 6h
+          @fulano <BsDot /> {dayjs(timestamp).fromNow()}
         </span>
       </p>
       <a href=''>
