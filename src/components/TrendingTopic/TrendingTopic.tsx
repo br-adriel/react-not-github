@@ -6,7 +6,7 @@ const TrendingTopic = ({ sidebar = true }) => {
     <S.Wrapper isOnSidebar={sidebar}>
       <S.Subject>
         <S.FadedText>Assuntos do momento</S.FadedText>
-        <a href=''>
+        <a href='#' title='Menu'>
           <BsThreeDots />
         </a>
       </S.Subject>

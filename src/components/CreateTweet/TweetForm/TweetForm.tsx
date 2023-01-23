@@ -26,7 +26,7 @@ const TweetForm = ({ ...rest }: Props) => {
         setTweetContent('');
       }}
     >
-      <S.PublicSelector>
+      <S.PublicSelector type='button'>
         <p>Qualquer pessoa</p>
         <IoIosArrowDown />
       </S.PublicSelector>
@@ -40,7 +40,7 @@ const TweetForm = ({ ...rest }: Props) => {
         className={invalid ? 'invalid' : ''}
       ></textarea>
       <S.TweetDetails>
-        <S.AnswerSelector>
+        <S.AnswerSelector type='button'>
           <RiEarthFill />
           Qualquer pessoa pode responder
         </S.AnswerSelector>

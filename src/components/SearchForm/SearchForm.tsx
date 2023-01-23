@@ -11,7 +11,7 @@ const SearchForm = () => {
           <div>
             <input type='text' placeholder='Buscar no Twitter' />
             <S.ResetButtonWrapper>
-              <button type='reset'>
+              <button type='reset' title='Limpar'>
                 <IoMdCloseCircle />
               </button>
             </S.ResetButtonWrapper>

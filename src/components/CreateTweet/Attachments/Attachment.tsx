@@ -9,32 +9,32 @@ const Attachments = () => {
   return (
     <S.AddAttachment>
       <div>
-        <button>
+        <button type='button' title='Adicionar imagem'>
           <TbPhoto />
         </button>
       </div>
       <div>
-        <button>
+        <button type='button' title='Adicionar GIF'>
           <AiOutlineFileGif />
         </button>
       </div>
       <div>
-        <button>
+        <button type='button' title='Adicionar enquete'>
           <TfiList />
         </button>
       </div>
       <div>
-        <button>
+        <button type='button' title='Adicionar emoji'>
           <BsEmojiSmile />
         </button>
       </div>
       <div>
-        <button>
+        <button type='button' title='Programar envio'>
           <TbCalendarTime />
         </button>
       </div>
       <div>
-        <button>
+        <button type='button' title='Adicionar localização'>
           <BiMap />
         </button>
       </div>

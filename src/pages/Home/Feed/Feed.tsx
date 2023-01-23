@@ -45,7 +45,7 @@ const Feed = () => {
       <S.Title>
         <h2>Página inicial</h2>
         <div>
-          <a href=''>
+          <a href='#' title='Vendo tweets mais recentes'>
             <BsStars />
           </a>
         </div>
