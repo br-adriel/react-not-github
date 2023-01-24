@@ -28,6 +28,10 @@ export const HeaderTag = styled.header`
     background: none;
     cursor: pointer;
 
+    svg {
+      color: ${({ theme }: { theme: Theme }) => theme.text};
+    }
+
     :hover {
       background: ${({ theme }: { theme: Theme }) => `${theme.text}11`};
     }
@@ -47,11 +51,14 @@ export const HeaderTag = styled.header`
 
     :last-of-type {
       background: ${({ theme }: { theme: Theme }) => theme.accent};
-      color: #fff;
       margin-top: 10px;
 
       :hover {
         opacity: 0.8;
+      }
+
+      svg {
+        color: #fff;
       }
     }
   }

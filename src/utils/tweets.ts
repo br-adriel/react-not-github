@@ -3,7 +3,6 @@ import {
   collection,
   doc,
   getDoc,
-  QueryDocumentSnapshot,
   serverTimestamp,
 } from 'firebase/firestore';
 import { TweetType, TweetWithAuthorType, UserType } from '../global/types';

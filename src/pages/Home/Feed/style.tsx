@@ -6,9 +6,7 @@ export const Title = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 6px 16px;
-  border: 1px solid #eee;
-  border-top: none;
-  border-bottom: none;
+  border-bottom: 1px solid ${({ theme }: { theme: Theme }) => theme.borderColor};
   position: sticky;
   top: 0;
   background: ${({ theme }: { theme: Theme }) => `${theme.bg}aa`};

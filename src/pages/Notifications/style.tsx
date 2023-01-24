@@ -16,7 +16,7 @@ export const Heading = styled.div`
   position: sticky;
   z-index: 2;
   top: 0;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid ${({ theme }: { theme: Theme }) => theme.borderColor};
 
   h2 {
     font-size: 1.2rem;
@@ -28,8 +28,8 @@ export const Content = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  border-right: 1px solid #ddd;
-  border-left: 1px solid #ddd;
+  border-right: 1px solid ${({ theme }: { theme: Theme }) => theme.borderColor};
+  border-left: 1px solid ${({ theme }: { theme: Theme }) => theme.borderColor};
   height: 100%;
 `;
 

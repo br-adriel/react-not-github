@@ -4,16 +4,17 @@ import * as S from './style';
 
 interface Props {
   displayName: string;
+  email: string;
   timestamp?: Date;
 }
 
-const TweetAuthor = ({ displayName, timestamp }: Props) => {
+const TweetAuthor = ({ displayName, email, timestamp }: Props) => {
   return (
     <S.Author>
       <p>
         <a>{displayName}</a>
         <span>
-          @fulano <BsDot /> {dayjs(timestamp).fromNow()}
+          {email} <BsDot /> {dayjs(timestamp).fromNow()}
         </span>
       </p>
       <a href=''>

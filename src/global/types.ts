@@ -14,6 +14,7 @@ export type Theme = {
   likeHover: string;
   retweetHover: string;
   brandColor: string;
+  borderColor: string;
 };
 
 export interface UserType {
@@ -21,6 +22,10 @@ export interface UserType {
   displayName: string;
   email: string;
   photoURL: string;
+}
+
+export interface UserWithTheme extends UserType {
+  theme: Theme;
 }
 
 export interface TweetType {

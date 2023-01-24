@@ -24,6 +24,7 @@ const Tweet = ({ tweet }: { tweet: TweetWithAuthorType }) => {
         />
         <div>
           <TweetAuthor
+            email={tweet.author.email}
             displayName={tweet.author.displayName}
             timestamp={tweet.timestamp && tweet.timestamp.toDate()}
           />

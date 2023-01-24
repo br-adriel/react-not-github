@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import { selectAuth } from '../../store/authSlice';
 import { LoginForm, SignUpForm } from '../AuthForm';
-import AuthModal from '../AuthModal/AuthModal';
+import Modal from '../AuthModal/Modal';
 import { Container920px } from '../Container';
 import * as S from './style';
 
@@ -17,12 +17,12 @@ const LoginBanner = () => {
           <p>As pessoas que usam o Twitter são as primeiras a saber.</p>
         </S.TextContent>
         <S.BtnGroup>
-          <AuthModal triggerContent={'Entrar'}>
+          <Modal triggerContent={'Entrar'}>
             <LoginForm />
-          </AuthModal>
-          <AuthModal triggerContent={'Inscrever-se'}>
+          </Modal>
+          <Modal triggerContent={'Inscrever-se'}>
             <SignUpForm />
-          </AuthModal>
+          </Modal>
         </S.BtnGroup>
       </Container920px>
     </S.Wrapper>

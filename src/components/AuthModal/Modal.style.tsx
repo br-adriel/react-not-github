@@ -7,6 +7,7 @@ export const Overlay = styled(Dialog.Overlay)`
   height: 100vh;
   background-color: #2225;
   position: fixed;
+  z-index: 9999;
   top: 0;
   left: 0;
   overflow-y: auto;

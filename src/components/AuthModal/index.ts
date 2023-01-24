@@ -1,3 +1,3 @@
-import AuthModal from './AuthModal';
+import Modal from './Modal';
 
-export default AuthModal;
+export default Modal;

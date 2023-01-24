@@ -3,7 +3,7 @@ import { Theme } from '../../global/types';
 
 export const Wrapper = styled.div`
   display: flex;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid ${({ theme }: { theme: Theme }) => theme.borderColor};
   width: 100%;
   flex-direction: column;
   padding: 6px;

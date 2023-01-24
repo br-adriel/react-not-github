@@ -15,6 +15,8 @@ export const Form = styled.form`
     padding: 0;
     outline: none;
     border: 2px solid transparent;
+    background: ${({ theme }: { theme: Theme }) => theme.bg};
+    color: ${({ theme }: { theme: Theme }) => theme.text};
 
     &.invalid {
       border: 2px red solid;
@@ -26,7 +28,7 @@ export const Form = styled.form`
 export const PublicSelector = styled.button`
   border-radius: 20px;
   padding: 2px 12px;
-  border: 1px solid #ddd;
+  border: 1px solid ${({ theme }: { theme: Theme }) => theme.borderColor};
   background: ${({ theme }: { theme: Theme }) => theme.bg};
   color: ${({ theme }: { theme: Theme }) => theme.accent};
   font-weight: 700;
@@ -64,7 +66,7 @@ export const AnswerSelector = styled.button`
 
 export const ActionBar = styled.div`
   width: 100%;
-  border-top: 1px solid #eee;
+  border-top: 1px solid ${({ theme }: { theme: Theme }) => theme.borderColor};
   margin-top: 10px;
   display: flex;
   justify-content: space-between;

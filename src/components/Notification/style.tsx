@@ -1,10 +1,10 @@
 import styled from 'styled-components';
-import { NotificationType } from '../../global/types';
+import { NotificationType, Theme } from '../../global/types';
 
 export const Wrapper = styled.div<{ type: NotificationType }>`
   padding: 12px 16px;
   display: flex;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid ${({ theme }: { theme: Theme }) => theme.borderColor};
   ${(props) => (props.type === 'response' ? `padding-bottom: 4px;` : null)};
 `;
 
