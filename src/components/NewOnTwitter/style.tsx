@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  border: 1px solid #ddd;
+  border: 1px solid ${({ theme }: { theme: Theme }) => theme.borderColor};
   padding: 16px;
   border-radius: 16px;
   gap: 8px;
@@ -33,7 +33,7 @@ export const Wrapper = styled.div`
     font-weight: 600;
     background: #fff;
     color: #000;
-    border: 1px solid #ddd;
+    border: 1px solid ${({ theme }: { theme: Theme }) => theme.borderColor};
     word-spacing: 1px;
 
     svg {

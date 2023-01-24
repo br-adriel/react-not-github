@@ -59,5 +59,6 @@ export const Subject = styled.div`
   svg {
     width: 19px;
     height: 19px;
+    color: ${({ theme }: { theme: Theme }) => theme.textAlt};
   }
 `;

@@ -31,7 +31,7 @@ export const InnerWrapper = styled.div`
     margin: 10px 0;
     gap: 4px;
     background-color: #fff;
-    border: 1px solid #ddd;
+    border: 1px solid ${({ theme }: { theme: Theme }) => theme.borderColor};
 
     :hover {
       opacity: 0.8;
@@ -64,7 +64,7 @@ export const InnerWrapper = styled.div`
     font-size: 14px;
     font-weight: 500;
     border-radius: 5px;
-    border: 1px solid #ddd;
+    border: 1px solid ${({ theme }: { theme: Theme }) => theme.borderColor};
 
     :focus {
       outline-color: ${({ theme }: { theme: Theme }) => theme.accent};

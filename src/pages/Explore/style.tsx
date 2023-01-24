@@ -31,12 +31,20 @@ export const SearchWrapper = styled.div`
   width: 100%;
   padding: 0 16px;
   gap: 16px;
+
+  input {
+    color: ${({ theme }: { theme: Theme }) => theme.text};
+  }
+
+  svg {
+    color: ${({ theme }: { theme: Theme }) => theme.text};
+  }
 `;
 
 export const TopSection = styled.div`
   display: flex;
   flex-direction: column;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid ${({ theme }: { theme: Theme }) => theme.borderColor};
 `;
 
 export const SettingsButtonWrapper = styled.div`
@@ -70,7 +78,7 @@ export const SettingsButtonWrapper = styled.div`
 export const Container = styled(Container600px)`
   min-height: 100vh;
   flex-direction: column;
-  border-right: 1px solid #ddd;
-  border-left: 1px solid #ddd;
+  border-right: 1px solid ${({ theme }: { theme: Theme }) => theme.borderColor};
+  border-left: 1px solid ${({ theme }: { theme: Theme }) => theme.borderColor};
   padding-bottom: 100px;
 `;
