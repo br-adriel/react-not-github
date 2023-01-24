@@ -11,8 +11,8 @@ const ProfileSnippet = () => {
           height='48px'
         />
         <div>
-          <S.Username>Felipe Neto</S.Username>
-          <S.UserHandle>@felipeneto</S.UserHandle>
+          <S.Username>Dolor Sit</S.Username>
+          <S.UserHandle>email@example.com</S.UserHandle>
         </div>
       </S.Profile>
       <button>Seguir</button>

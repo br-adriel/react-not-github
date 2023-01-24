@@ -6,7 +6,7 @@ import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import NewOnTweeter from '../../components/NewOnTwitter';
 import SearchForm from '../../components/SearchForm';
-import SidebarWrapper from '../../components/SideBarWrapper';
+import SidebarWrapper from '../../components/SidebarWrapper';
 import { selectAuth } from '../../store/authSlice';
 import * as S from './style';
 
@@ -35,6 +35,10 @@ const Explore = () => {
             </NavLink>
           </S.Navigation>
         </S.TopSection>
+        <S.Trending sidebar={false} />
+        <S.Trending sidebar={false} />
+        <S.Trending sidebar={false} />
+        <S.Trending sidebar={false} />
         <S.Trending sidebar={false} />
         <S.Trending sidebar={false} />
         <S.Trending sidebar={false} />

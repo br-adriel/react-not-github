@@ -1,20 +1,20 @@
 import { NotificationText, ProfileImage } from '../style';
 import { TweetText } from './style';
-const LikeNotification = () => {
+
+interface Props {
+  img: string;
+}
+
+const LikeNotification = ({ img }: Props) => {
   return (
     <>
       <ProfileImage>
         <a href=''>
-          <img
-            src='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png'
-            alt=''
-            width='32px'
-            height='32px'
-          />
+          <img src={img} alt='' width='32px' height='32px' />
         </a>
       </ProfileImage>
       <NotificationText>
-        <a href=''>Fulaninho silva</a> curtiu seu tweet
+        <a href=''>Lorem Ipsum</a> curtiu seu tweet
       </NotificationText>
       <TweetText>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus,

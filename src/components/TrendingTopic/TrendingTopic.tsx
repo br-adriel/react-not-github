@@ -10,8 +10,8 @@ const TrendingTopic = ({ sidebar = true }) => {
           <BsThreeDots />
         </a>
       </S.Subject>
-      <h4>Paula Fernandes</h4>
-      <S.FadedText>1702 Tweets</S.FadedText>
+      <h4>Lorem ipsum</h4>
+      <S.FadedText>{Math.floor(Math.random() * 95) + 5} mil tweets</S.FadedText>
     </S.Wrapper>
   );
 };
