@@ -5,7 +5,11 @@ import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { selectAuth } from '../../store/authSlice';
 import { logOut } from '../../utils/auth';
+import Modal from '../AuthModal';
+import CreateTweet from '../CreateTweet';
+import TweetForm from '../CreateTweet/TweetForm';
 import Navbar from '../Navbar';
+import ThemeSelector from '../ThemeSelector/ThemeSelector';
 import * as S from './style';
 
 const Header = () => {
@@ -21,12 +25,12 @@ const Header = () => {
         <Navbar />
         {!user ? null : (
           <>
-            <button title='Menu'>
-              <BiDotsHorizontalRounded />
-            </button>
-            <button title='Novo tweet'>
-              <FiFeather />
-            </button>
+            <Modal title='Menu' triggerContent={<BiDotsHorizontalRounded />}>
+              <ThemeSelector />
+            </Modal>
+            <Modal title='Novo tweet' triggerContent={<FiFeather />}>
+              <CreateTweet />
+            </Modal>
           </>
         )}
       </div>

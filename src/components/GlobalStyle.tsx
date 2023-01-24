@@ -32,7 +32,7 @@ export const darkerTheme: Theme = {
   bg2: '#16181C',
   bg2Hover: '#1D1F23',
   brandColor: '#ffffff',
-  borderColor: '#dddddd',
+  borderColor: '#222',
 };
 
 export const lightTheme: Theme = {

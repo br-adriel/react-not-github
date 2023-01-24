@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState } from '.';
-import { UserWithTheme } from '../global/types';
+import { Theme, UserWithTheme } from '../global/types';
 
 type StateType = {
   user: UserWithTheme | null;
@@ -20,10 +20,15 @@ const authSlice = createSlice({
     logout: (state) => {
       state.user = null;
     },
+    setUserTheme: (state, action: PayloadAction<{ theme: Theme }>) => {
+      if (state.user) {
+        state.user.theme = action.payload.theme;
+      }
+    },
   },
 });
 
-export const { login, logout } = authSlice.actions;
+export const { login, logout, setUserTheme } = authSlice.actions;
 
 export default authSlice;
 

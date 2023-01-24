@@ -51,7 +51,7 @@ const Navbar = () => {
           <NavItem
             icon={<BsPerson />}
             iconActive={<BsPersonFill />}
-            link='/username'
+            link='/profile'
             title='Perfil'
           />
         </>
