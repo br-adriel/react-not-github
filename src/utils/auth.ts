@@ -5,9 +5,10 @@ import {
   signInWithPopup,
   signOut,
   updateProfile,
-  User,
 } from 'firebase/auth';
-import { doc, setDoc } from 'firebase/firestore';
+import { doc, getDoc, setDoc } from 'firebase/firestore';
+import { lightTheme } from '../components/GlobalStyle';
+import { UserWithTheme } from '../global/types';
 import { auth, db } from '../services/firebase';
 import { store } from '../store';
 import { login, logout } from '../store/authSlice';
@@ -21,24 +22,29 @@ export const signInGoogle = async () => {
     const token = credential?.accessToken;
     const user = res.user;
 
+    const userSavedData = await getDoc(doc(db, 'users', user.uid));
+
     if (user && token) {
       const userData = {
         uid: user.uid,
         photoURL: user.photoURL,
         displayName: user.displayName,
         email: user.email,
+        theme: userSavedData.exists() ? userSavedData.data().theme : lightTheme,
       };
 
       sessionStorage.setItem('@AuthFirebase:user', JSON.stringify(userData));
 
       store.dispatch(
         login({
-          user: userData as User,
+          user: userData as UserWithTheme,
         })
       );
 
-      const userRef = doc(db, 'users', userData.uid);
-      await setDoc(userRef, userData);
+      if (!userSavedData.exists()) {
+        const userRef = doc(db, 'users', userData.uid);
+        await setDoc(userRef, userData);
+      }
     }
   } catch (error) {
     alert('Um erro ocorreu');
@@ -68,11 +74,12 @@ export const SignInWithEmail = async (
     photoURL: userCredential.user.photoURL,
     uid: userCredential.user.uid,
     email: userCredential.user.email,
+    theme: lightTheme,
   };
 
   store.dispatch(
     login({
-      user: userData as User,
+      user: userData as UserWithTheme,
     })
   );
 
@@ -85,18 +92,21 @@ export const logInWithEmail = async (email: string, password: string) => {
     const credential = await signInWithEmailAndPassword(auth, email, password);
     const user = credential.user;
 
+    const userThemeData = await getDoc(doc(db, 'users', user.uid));
+
     if (user) {
       const userData = {
         uid: user.uid,
         photoURL: user.photoURL,
         displayName: user.displayName,
+        theme: userThemeData.data()!.theme,
       };
 
       sessionStorage.setItem('@AuthFirebase:user', JSON.stringify(userData));
 
       store.dispatch(
         login({
-          user: userData as User,
+          user: userData as UserWithTheme,
         })
       );
     }
