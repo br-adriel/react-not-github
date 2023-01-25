@@ -7,9 +7,8 @@ import { selectAuth } from '../../store/authSlice';
 import { logOut } from '../../utils/auth';
 import Modal from '../AuthModal';
 import CreateTweet from '../CreateTweet';
-import TweetForm from '../CreateTweet/TweetForm';
 import Navbar from '../Navbar';
-import ThemeSelector from '../ThemeSelector/ThemeSelector';
+import ThemeSelector from '../ThemeSelector';
 import * as S from './style';
 
 const Header = () => {

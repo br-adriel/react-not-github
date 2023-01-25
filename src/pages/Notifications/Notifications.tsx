@@ -5,6 +5,7 @@ import { Container600px } from '../../components/Container';
 import Header from '../../components/Header';
 import HorizontalNavigation from '../../components/HorizontalNavigation';
 import * as S from './style';
+import * as PageTitle from '../../components/PageTitle';
 
 const Notifications = () => {
   return (
@@ -13,14 +14,14 @@ const Notifications = () => {
       <Container600px>
         <S.Content>
           <S.Heading>
-            <S.Title>
+            <PageTitle.Title>
               <h2>Notificações</h2>
-              <S.Settings>
+              <PageTitle.Icon>
                 <a href=''>
                   <FiSettings />
                 </a>
-              </S.Settings>
-            </S.Title>
+              </PageTitle.Icon>
+            </PageTitle.Title>
             <HorizontalNavigation>
               <NavLink to={'/notifications/'}>
                 <div>
