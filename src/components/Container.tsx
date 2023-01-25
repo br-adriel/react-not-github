@@ -13,6 +13,13 @@ export const Container600px = styled.div`
   border-right: 1px solid ${({ theme }: { theme: Theme }) => theme.borderColor};
 `;
 
+export const Container320px = styled.div`
+  width: 100%;
+  max-width: 320px;
+  border-left: 1px solid ${({ theme }: { theme: Theme }) => theme.borderColor};
+  border-right: 1px solid ${({ theme }: { theme: Theme }) => theme.borderColor};
+`;
+
 export const Container920px = styled.div`
   width: 100%;
   max-width: 920px;

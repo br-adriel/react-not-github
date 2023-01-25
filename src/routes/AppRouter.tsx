@@ -6,6 +6,7 @@ import Notifications, {
   Verified,
 } from '../pages/Notifications';
 import Explore from '../pages/Explore';
+import Messages from '../pages/Messages';
 
 const AppRouter = () => {
   return (
@@ -18,6 +19,7 @@ const AppRouter = () => {
           <Route path='verified' element={<Verified />} />
           <Route path='mentions' element={<Mentions />} />
         </Route>
+        <Route path='messages' element={<Messages />} />
       </Routes>
     </HashRouter>
   );

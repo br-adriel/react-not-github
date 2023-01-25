@@ -32,35 +32,3 @@ export const Content = styled.div`
   border-left: 1px solid ${({ theme }: { theme: Theme }) => theme.borderColor};
   height: 100%;
 `;
-
-export const Title = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 6px 16px;
-`;
-
-export const Settings = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  display: flex;
-
-  :hover {
-    background: ${({ theme }: { theme: Theme }) => `${theme.text}11`};
-    border-radius: 50%;
-  }
-
-  a {
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    color: inherit;
-
-    svg {
-      width: 20px;
-      height: 20px;
-    }
-  }
-`;
