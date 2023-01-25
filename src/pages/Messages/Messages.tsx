@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { BiMessageAdd } from 'react-icons/bi';
 import { FiSettings } from 'react-icons/fi';
 import { Container600px } from '../../components/Container';
@@ -8,6 +9,10 @@ import * as S from './style';
 const Messages = () => {
   return (
     <S.Wrapper>
+      <Helmet>
+        <title>Mensagens / Not twitter</title>
+      </Helmet>
+
       <Header />
       <S.Content>
         <Container600px>

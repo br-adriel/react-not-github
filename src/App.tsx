@@ -6,6 +6,7 @@ import { Provider } from './contexts/ThemeContext';
 import AppRouter from './routes/AppRouter';
 import { login } from './store/authSlice';
 import './lib/dayjs';
+import { HelmetProvider } from 'react-helmet-async';
 
 function App() {
   const dispatch = useDispatch();
@@ -22,7 +23,9 @@ function App() {
   return (
     <Provider>
       <GlobalStyle />
-      <AppRouter />
+      <HelmetProvider>
+        <AppRouter />
+      </HelmetProvider>
       <LoginBanner />
     </Provider>
   );

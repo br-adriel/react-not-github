@@ -6,10 +6,15 @@ import Header from '../../components/Header';
 import HorizontalNavigation from '../../components/HorizontalNavigation';
 import * as S from './style';
 import * as PageTitle from '../../components/PageTitle';
+import { Helmet } from 'react-helmet-async';
 
 const Notifications = () => {
   return (
     <S.Wrapper>
+      <Helmet>
+        <title>Notificações / Not twitter</title>
+      </Helmet>
+
       <Header />
       <Container600px>
         <S.Content>

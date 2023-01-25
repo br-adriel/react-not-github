@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { useSelector } from 'react-redux';
 import Aside from '../../components/Aside';
 import Header from '../../components/Header';
@@ -12,6 +13,10 @@ const Home = () => {
   if (!user) return <Explore />;
   return (
     <S.Wrapper>
+      <Helmet>
+        <title>Página inicial / Not twitter</title>
+      </Helmet>
+
       <Header />
       <Feed />
       <Aside />
