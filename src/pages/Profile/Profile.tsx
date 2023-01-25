@@ -1,5 +1,6 @@
 import { collection, onSnapshot, orderBy, query } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import Aside from '../../components/Aside';
@@ -38,6 +39,10 @@ const Profile = () => {
 
   return (
     <S.Wrapper>
+      <Helmet>
+        <title>{user?.displayName} / Not twitter</title>
+      </Helmet>
+
       <Header />
       <S.Container600>
         <StickyTop displayName={user!.displayName} tweetsCount={20} />

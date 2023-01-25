@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { FiSettings } from 'react-icons/fi';
 import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
@@ -15,6 +16,10 @@ const Explore = () => {
 
   return (
     <S.Wrapper>
+      <Helmet>
+        <title>Explorar / Not twitter</title>
+      </Helmet>
+
       <Header />
       <S.Container>
         <S.TopSection>
