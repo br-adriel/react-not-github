@@ -7,6 +7,7 @@ import Notifications, {
 } from '../pages/Notifications';
 import Explore from '../pages/Explore';
 import Messages from '../pages/Messages';
+import Profile from '../pages/Profile';
 
 const AppRouter = () => {
   return (
@@ -20,6 +21,7 @@ const AppRouter = () => {
           <Route path='mentions' element={<Mentions />} />
         </Route>
         <Route path='messages' element={<Messages />} />
+        <Route path='profile' element={<Profile />} />
       </Routes>
     </HashRouter>
   );
