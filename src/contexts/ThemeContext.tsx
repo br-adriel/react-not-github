@@ -1,7 +1,7 @@
 import React, { createContext, useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { ThemeProvider } from 'styled-components';
-import { lightTheme } from '../components/GlobalStyle';
+import { darkerTheme, lightTheme } from '../components/GlobalStyle';
 import { selectAuth } from '../store/authSlice';
 
 type contextType = {
@@ -15,7 +15,19 @@ const Provider: React.FC<{ children?: any }> = ({ children }) => {
   const [currentTheme, setCurrentTheme] = useState(lightTheme);
 
   useEffect(() => {
-    setCurrentTheme(user ? user.theme : lightTheme);
+    const getBrowserTheme = () => {
+      const darkBrowser = window.matchMedia(
+        '(prefers-color-scheme: dark)'
+      ).matches;
+      if (darkBrowser) return darkerTheme;
+      else return lightTheme;
+    };
+
+    const theme = user ? user.theme : getBrowserTheme();
+    setCurrentTheme(theme);
+
+    const metaThemeColor = document.querySelector('meta[name=theme-color]');
+    metaThemeColor?.setAttribute('content', theme.bg);
   }, [user]);
 
   return (

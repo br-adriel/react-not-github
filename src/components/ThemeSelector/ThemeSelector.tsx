@@ -45,6 +45,9 @@ const ThemeSelector = () => {
         theme: newTheme,
       })
     );
+
+    const metaThemeColor = document.querySelector('meta[name=theme-color]');
+    metaThemeColor?.setAttribute('content', newTheme.bg);
   };
 
   return (
