@@ -3,6 +3,11 @@ import * as S from './style';
 export const Footer = () => {
   return (
     <S.FooterTag>
+      <p>
+        Essa página não tem qualquer relação com o twitter, e foi construída
+        para parecer com o site oficial com a finalidade de praticar as
+        habilidades de desenvolvimento frontend do desenvolvedor
+      </p>
       <div>
         <a
           href='https://github.com/br-adriel'
