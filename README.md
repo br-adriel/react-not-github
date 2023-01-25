@@ -36,3 +36,4 @@ métodos de email/senha e conta Google habilitados.
 - Criação de "tweet" (não foi implementado a adição de anexos)
 - Feed de tweets (a listagem engloba todos os "tweets" feitos na plataforma)
 - Perfil do usuário (lista os "tweets" feitos pelo usuário logado)
+- Customização das cores de fundo e de destaque do site
